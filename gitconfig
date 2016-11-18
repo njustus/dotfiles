@@ -11,6 +11,7 @@
   co = checkout
   df = diff
   s = status
+  c = commit
   l = log
   a = add
   ap = add --patch
