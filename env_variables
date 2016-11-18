@@ -1,0 +1,7 @@
+#system specific environment variables
+
+#export JAVA_HOME=
+#export SCALA_HOME=
+#export SBT_HOME=
+#export GRADLE_HOME=
+#export LEIN_HOME=
