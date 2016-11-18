@@ -4,6 +4,7 @@ echo "setup bash"
 ln -f ./bashrc ~/.bashrc
 ln -f ./bash_aliases ~/.bash_aliases
 cp -f ./env_variables ~/.env_variables
+cp -f ./system_config ~/.system_config
 
 echo "setup git"
 ln -f ./gitconfig ~/.gitconfig
