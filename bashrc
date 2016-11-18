@@ -2,6 +2,14 @@
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+#append to histfile; not overwrite
+shopt -s histappend
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+
 export EDITOR=vim #default editor
 
 bash ~/.env_variables
