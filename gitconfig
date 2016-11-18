@@ -1,0 +1,16 @@
+[user]
+  name =  N. Justus
+  email = nicola.justus@mni.thm.de
+
+[editor]
+  editor = vim
+
+[alias]
+  br = branch
+  ki = commit
+  co = checkout
+  df = diff
+  s = status
+  l = log
+  ll = log --graph
+  llc = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
