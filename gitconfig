@@ -12,5 +12,8 @@
   df = diff
   s = status
   l = log
+  a = add
+  ap = add --patch
   ll = log --graph
   llc = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  rr = reset --hard
