@@ -1,6 +1,13 @@
 #contains aliases for bash
 
-alias ls='ls --color=auto'
+
+if [ "$SYSTEM" == "osx" ]
+then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
+
 alias grep='grep --color=auto'
 
 alias ll='ls -ahlF'
