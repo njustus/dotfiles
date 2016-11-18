@@ -2,6 +2,8 @@
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+export EDITOR=vim
+
 ./.bash_aliases
 
 # custom promp
