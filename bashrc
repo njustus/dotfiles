@@ -2,10 +2,15 @@
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-export EDITOR=vim
+export EDITOR=vim #default editor
 
-./.bash_aliases
+bash ~/.env_variables
+
+if [ "$SYSTEM" == "linux" ]
+  then export TERM=xterm-256color #true 256 color terminal
+fi
+
+bash ~/.bash_aliases
 
 # custom promp
 export PS1="\[\e[0;36m\]\u\[\e[m\]@\[\e[0;36m\]\H\[\e[m\] - \[\e[37m\]\A\[\e[m\]\n\[\e[1;36m\]\W\[\e[1;31m\] \\$\[\e[0m\]  "
-./.env_variables
