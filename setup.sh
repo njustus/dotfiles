@@ -25,5 +25,3 @@ echo "setup sbt plugins"
 sbt_plugins_path=~/.sbt/0.13/plugins
 mkdir -p $sbt_plugins_path
 ln -sf $current/sbt/plugins.sbt $sbt_plugins_path/plugins.sbt
-
-echo "=== set your system in ~/.env_variables using $SYSTEM"

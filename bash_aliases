@@ -1,7 +1,8 @@
+#!/bin/bash
 #contains aliases for bash
 
 
-if [ "$SYSTEM" == "osx" ]
+if [ $(isMac) == true ]
 then
     alias ls='ls -G'
 else

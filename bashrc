@@ -1,3 +1,4 @@
+#!/bin/bash
 # set history length
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -12,10 +13,28 @@ shopt -s checkwinsize
 
 export EDITOR=vim #default editor
 
+#setup lookup for system type
+system=$(uname -s)
+function isMac() {
+  case $system in
+    "Darwin") echo true ;;
+    *) echo false ;;
+  esac
+}
+function isLinux() {
+  case $system in
+    "Linux") echo true ;;
+    *) echo false ;;
+  esac
+}
+export -f isMac
+export -f isLinux
+
 source ~/.env_variables
 
-if [ "$SYSTEM" == "linux" ]
-  then export TERM=xterm-256color #true 256 color terminal
+if [ $(isLinux) == true ]
+  then
+    export TERM=xterm-256color #true 256 color terminal
 fi
 
 source ~/.bash_aliases

@@ -1,8 +1,5 @@
 #system specific environment variables
 
-# your system? either 'linux' or 'osx'
-#export SYSTEM=
-
 #export JAVA_HOME=
 #export SCALA_HOME=
 #export SBT_HOME=
