@@ -5,6 +5,7 @@
 if [ $(isMac) == true ]
 then
     alias ls='ls -G'
+    alias lockscr='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 else
     alias ls='ls --color=auto'
 fi
