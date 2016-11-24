@@ -6,6 +6,7 @@ apm install file-icons
 apm install docblockr
 apm install minimap
 apm install project-manager
+apm install ensime
 
 #language support
 apm install language-latex
