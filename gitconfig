@@ -19,5 +19,7 @@
   ll = log --graph
   llc = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   rr = reset --hard
+  pl = pull
+  ps = push
   plom = pull origin master
   psom = push origin master
