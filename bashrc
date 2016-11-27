@@ -27,8 +27,12 @@ function isLinux() {
     *) echo false ;;
   esac
 }
+function path() {
+  echo $(pwd)/$1
+}
 export -f isMac
 export -f isLinux
+export -f path
 
 source ~/.env_variables
 
