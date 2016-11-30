@@ -32,7 +32,9 @@
         ))
 
 ; font size
-(set-face-attribute 'default nil :height 100)
+(if (string= system-type "darwin")
+    (set-face-attribute 'default nil :height 120)
+    (set-face-attribute 'default nil :height 100))
 ; theme
 (load-theme 'tango)
 ; highlight matching parentheses
