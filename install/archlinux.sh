@@ -28,17 +28,15 @@ ides=(
 
 read -p "install ides?[y/n] " withIdes
 
-#pacman -Sy #update db
+pacman -Sy #update db
 for package in ${packages[@]};
 do
-  #pacman -S --needed --noconfirm $package
-  echo $package
+  pacman -S --needed --noconfirm $package
 done;
 
 if [ $withIdes == "y" ]; then
   for package in ${ides[@]};
   do
-    #pacman -S --needed --noconfirm $package
-    echo $package
+    pacman -S --needed --noconfirm $package
   done;
 fi;
