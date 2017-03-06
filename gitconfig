@@ -1,3 +1,15 @@
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[color "diff"]
+  meta = yellow
+  frag = magenta
+  old = red
+  new = green
+
 [user]
   name =  N. Justus
   email = nicola.justus@mni.thm.de
