@@ -13,6 +13,10 @@ shopt -s checkwinsize
 
 export EDITOR=vim #default editor
 
+# activate keyring capabilities
+source ~/.i3/start-gnome-keyring.sh
+
+
 #setup lookup for system type
 system=$(uname -s)
 function isMac() {
@@ -30,9 +34,13 @@ function isLinux() {
 function path() {
   echo $(pwd)/$1
 }
+function pless() {
+  pygmentize $1 | less -R
+}
 export -f isMac
 export -f isLinux
 export -f path
+export -f pless
 
 source ~/.env_variables
 
@@ -47,3 +55,5 @@ source ~/.bash_aliases
 export PS1="\[\e[1;33m\]\u\[\e[m\]@\[\e[0;34m\]\h\[\e[m\] - \[\e[1;36m\]\W\[\e[m\]\n\[\e[1;31m\] ~>\[\e[m\] "
 
 source ~/.system_config
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
