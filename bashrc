@@ -14,7 +14,7 @@ shopt -s checkwinsize
 export EDITOR=vim #default editor
 
 # activate keyring capabilities
-source ~/.i3/start-gnome-keyring.sh
+#source ~/.i3/start-gnome-keyring.sh
 
 
 #setup lookup for system type
