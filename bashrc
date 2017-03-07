@@ -17,6 +17,13 @@ export EDITOR=vim #default editor
 #source ~/.i3/start-gnome-keyring.sh
 
 
+function git_branch() {
+  local branch=$(git rev-parse --abbrev-ref HEAD 2>> /dev/null)
+  if [ $branch ]
+    then echo "("$branch")"
+  fi
+}
+
 #setup lookup for system type
 system=$(uname -s)
 function isMac() {
@@ -52,7 +59,7 @@ fi
 source ~/.bash_aliases
 
 # custom promp
-export PS1="\[\e[1;33m\]\u\[\e[m\]@\[\e[0;34m\]\h\[\e[m\] - \[\e[1;36m\]\W\[\e[m\]\n\[\e[1;31m\] ~>\[\e[m\] "
+export PS1='\[\e[1;33m\]\u\[\e[m\]@\[\e[0;34m\]\h\[\e[m\] - \[\e[1;36m\]\W\[\e[m\] \[\e[33m\]$(git_branch)\n\[\e[1;31m\] ~>\[\e[m\] '
 
 source ~/.system_config
 
