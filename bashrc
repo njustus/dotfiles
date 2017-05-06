@@ -17,10 +17,21 @@ export EDITOR=vim #default editor
 #source ~/.i3/start-gnome-keyring.sh
 
 
-function git_branch() {
+function git_info() {
   local branch=$(git rev-parse --abbrev-ref HEAD 2>> /dev/null)
-  if [ $branch ]
-    then echo "("$branch")"
+  local status=$(git status -s 2>> /dev/null)
+  if [ $branch ]; then
+    echo -n "("$branch #git branch name
+
+    #git status indicator; indicates nothing if working directory is clean
+    if [[ $status =~ ^.M ]] #modified files
+      then echo -n " - ✬"
+    elif [[ $status =~ ^\? ]] #new/unknown files
+      then echo -n " - ❓"
+    elif [[ $status =~ ^.D ]] #deleted files
+      then echo -n " - ✗"
+    fi
+    echo -n ")"
   fi
 }
 
@@ -59,7 +70,7 @@ fi
 source ~/.bash_aliases
 
 # custom promp
-export PS1='┌ \[\e[1;33m\]\u\[\e[m\]@\[\e[0;34m\]\h\[\e[m\] - \[\e[1;36m\]\W\[\e[m\] \[\e[33m\]$(git_branch)\n\[\e[m\]└\[\e[1;31m\] ❔\[\e[m\] '
+export PS1='┌ \[\e[1;33m\]\u\[\e[m\]@\[\e[0;34m\]\h\[\e[m\] - \[\e[1;36m\]\W\[\e[m\] \[\e[33m\]$(git_info)\n\[\e[m\]└\[\e[1;31m\] ❔\[\e[m\] '
 
 source ~/.system_config
 
