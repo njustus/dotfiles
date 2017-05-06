@@ -22,6 +22,7 @@
   co = checkout
   df = diff
   s = status
+  ss = 'status --short --branch'
   c = commit
   l = log
   a = add
