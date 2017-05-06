@@ -8,6 +8,8 @@ then
     alias lockscr='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 else
     alias ls='ls --color=auto'
+    alias sdown='sudo shutdown -h now'
+    alias reboot='sudo reboot'
 fi
 
 alias g=git
