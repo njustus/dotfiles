@@ -14,3 +14,4 @@ alias g=git
 alias grep='grep --color=auto'
 
 alias ll='ls -ahlF'
+alias lsd='ls -d */' #list directories only
