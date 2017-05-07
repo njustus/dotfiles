@@ -27,7 +27,7 @@ function git_info() {
     if [[ $status =~ ^.M ]] #modified files
       then echo -n " - ✬"
     elif [[ $status =~ ^\? ]] #new/unknown files
-      then echo -n " - ❓"
+      then echo -n " - ?"
     elif [[ $status =~ ^.D ]] #deleted files
       then echo -n " - ✗"
     fi
@@ -70,7 +70,7 @@ fi
 source ~/.bash_aliases
 
 # custom promp
-export PS1='┌ \[\e[1;33m\]\u\[\e[m\]@\[\e[0;34m\]\h\[\e[m\] - \[\e[1;36m\]\W\[\e[m\] \[\e[33m\]$(git_info)\n\[\e[m\]└\[\e[1;31m\] ❔\[\e[m\] '
+export PS1='┌ \[\e[1;33m\]\u\[\e[m\]@\[\e[0;34m\]\h\[\e[m\] - \[\e[1;36m\]\W\[\e[m\] \[\e[33m\]$(git_info)\n\[\e[m\]└\[\e[1;31m\] ?\[\e[m\] '
 
 source ~/.system_config
 
