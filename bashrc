@@ -21,17 +21,16 @@ function git_info() {
   local branch=$(git rev-parse --abbrev-ref HEAD 2>> /dev/null)
   local status=$(git status -s 2>> /dev/null)
   if [ $branch ]; then
-    echo -n "("$branch #git branch name
+    echo -n $branch #git branch name
 
     #git status indicator; indicates nothing if working directory is clean
     if [[ $status =~ ^.M ]] #modified files
-      then echo -n " - ✬"
+      then echo -en " - ★"
     elif [[ $status =~ ^\? ]] #new/unknown files
-      then echo -n " - ?"
+      then echo -en " - \e[0;32m?"
     elif [[ $status =~ ^.D ]] #deleted files
-      then echo -n " - ✗"
+      then echo -en " - \e[0;31m✗"
     fi
-    echo -n ")"
   fi
 }
 
@@ -70,7 +69,7 @@ fi
 source ~/.bash_aliases
 
 # custom promp
-export PS1='┌ \[\e[0;32m\]\u\[\e[m\] at \[\e[0;34m\]\h\[\e[m\] in \[\e[0;36m\]\W\[\e[m\] \[\e[33m\]$(git_info)\n\[\e[m\]└\[\e[1;31m\] ?\[\e[m\] '
+export PS1='┌ \[\e[0;32m\]\u\[\e[m\] at \[\e[0;34m\]\h\[\e[m\] in \[\e[0;36m\]\W\[\e[m\] \[\e[33m\]($(git_info)\[\e[33m\])\n\[\e[m\]└\[\e[1;31m\] λ.\[\e[m\] '
 
 source ~/.system_config
 
