@@ -58,7 +58,7 @@ zstyle ':vcs_info:*' enable git
 precmd () { vcs_info }
 setopt prompt_subst
 
-export PROMPT="┌ %F{041}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
-└ %B%F{160}λ.%f%b "
+export PROMPT='┌ %F{041}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
+└ %B%F{160}λ.%f%b '
 
-export RPROMPT="%F{136}$vcs_info_msg_0_"
+export RPROMPT='%F{136}$vcs_info_msg_0_'
