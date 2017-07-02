@@ -41,6 +41,10 @@ if [ $(isMac) = true ]
 then
     alias ls='ls -G'
     alias lockscr='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+
+    #extension alias
+    alias -s html='open -a opera'
+    alias -s pdf='open -a preview'
 else
     alias ls='ls --color=auto'
     alias sdown='sudo shutdown -h now'
@@ -55,10 +59,13 @@ alias lsd='ls -d */' #list directories only
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' formats "(%F{blue}%s%f:%F{yellow}%b%f)"
+zstyle ':vcs_info:git*' formats "(%F{cyan}%s%f:%F{yellow}%b%f)"
+
 precmd () { vcs_info }
 setopt prompt_subst
 
-export PROMPT="┌ %F{041}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
-└ %B%F{160}λ.%f%b "
+export PROMPT='┌ %F{041}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
+└ %B%F{160}λ.%f%b '
 
-export RPROMPT="%F{136}$vcs_info_msg_0_"
+export RPROMPT='%F{136}$vcs_info_msg_0_'
