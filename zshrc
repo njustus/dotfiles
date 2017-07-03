@@ -49,6 +49,7 @@ else
     alias ls='ls --color=auto'
     alias sdown='sudo shutdown -h now'
     alias reboot='sudo reboot'
+    alias sbt='TERM=xterm sbt'
 fi
 
 alias g=git
