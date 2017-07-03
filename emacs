@@ -6,7 +6,8 @@
  column-number-mode t
  global-linum-mode t ; line numbers
  show-paren-mode t ; highlight parens
- tab-width 2)
+ tab-width 2
+ visible-bell t) ; stop beeping!
 
 (require 'package)
 
