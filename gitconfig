@@ -37,3 +37,4 @@
   psom = push origin master
   ammend = commit --amend --no-edit
   patch = add --patch
+  merged = branch --merged
