@@ -40,7 +40,7 @@ function pless() {
 if [ $(isMac) = true ]
 then
     alias ls='ls -G'
-    alias lockscr='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+    alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
     #extension alias
     alias -s html='open -a opera'
@@ -57,6 +57,8 @@ alias grep='grep --color=auto'
 
 alias ll='ls -ahlF'
 alias lsd='ls -d */' #list directories only
+alias path="echo $PATH | tr ':' '\n'"
+
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
