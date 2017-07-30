@@ -19,8 +19,11 @@ cp -r $current/vim ~/vim
 rm -r ~/.vim
 mv ~/vim ~/.vim
 
-echo "setup emacs"
-ln -sf $current/emacs ~/.emacs
+#echo "setup emacs"
+#ln -sf $current/emacs ~/.emacs
+
+echo "setup prelude"
+ln -s $current/personal ~/.emacs.d/personal
 
 echo "setup sbt plugins"
 sbt_plugins_path=~/.sbt/0.13/plugins
