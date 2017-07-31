@@ -1,1 +1,1 @@
-(setq prelude-theme 'spacemacs-dark)
+(setq prelude-theme 'doom-one)

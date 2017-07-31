@@ -17,4 +17,9 @@
 (setq
   line-number-mode t
   global-linum-mode t
-  prelude-guru nil)
+  prelude-guru nil
+  prelude-whitespace nil
+  auto-save-default nil
+  make-backup-files nil)
+
+(prelude-require-package 'ensime)
