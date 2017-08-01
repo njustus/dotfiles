@@ -15,11 +15,12 @@
   (set-face-attribute 'default nil :height 100))
 
 (setq
-  line-number-mode t
-  global-linum-mode t
-  prelude-guru nil
-  prelude-whitespace nil
-  auto-save-default nil
-  make-backup-files nil)
+ prelude-guru nil
+ prelude-whitespace nil
+ auto-save-default nil
+ make-backup-files nil
+ ensime-startup-notification nil)
+
+(global-linum-mode 1)
 
 (prelude-require-package 'ensime)
