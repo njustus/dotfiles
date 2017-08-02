@@ -23,4 +23,7 @@
 
 (global-linum-mode 1)
 
+(if (string= system-type "darwin")
+    (setq mac-right-option-modifier nil))
+
 (prelude-require-package 'ensime)
