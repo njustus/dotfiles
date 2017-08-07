@@ -2,8 +2,8 @@
 ;; initial window
 (setq initial-frame-alist
       '(
-        (width . 140) ; character
-        (height . 60) ; lines
+        (width . 170) ; character
+        (height . 55) ; lines
         ))
 
 
