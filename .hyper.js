@@ -86,7 +86,7 @@ module.exports = {
     bell: 'SOUND',
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: false
+    copyOnSelect: true
 
     // if true, on right click selected text will be copied or pasted if no
     // selection is present (true by default on Windows)
@@ -106,7 +106,10 @@ module.exports = {
   //   `project#1.0.1`
     plugins: [
         'hyper-statusline',
-        'hyper-ayu-mirage'
+        'hyper-ayu-mirage',
+        'hyper-mac-controls',
+        'hypercwd',
+        'hyper-tab-icons'
     ]
     
     ,
