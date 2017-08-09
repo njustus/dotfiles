@@ -107,7 +107,6 @@ module.exports = {
     plugins: [
         'hyper-statusline',
         'hyper-ayu-mirage',
-        'hyper-mac-controls',
         'hypercwd',
         'hyper-tab-icons'
     ]
