@@ -68,6 +68,14 @@ zstyle ':vcs_info:git*' formats "(%F{cyan}%s%f:%F{yellow}%b%f)"
 precmd () { vcs_info }
 setopt prompt_subst
 
+
+if [ $(isLinux) = true ]
+then
+  [[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
+fi
+
+source ~/.env_variables
+
 export PROMPT='┌ %F{041}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
 └ %B%F{160}λ.%f%b '
 
