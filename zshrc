@@ -45,11 +45,18 @@ then
     #extension alias
     alias -s html='open -a opera'
     alias -s pdf='open -a preview'
+    alias -s png='open -a preview'
+    alias -s jpeg='open -a preview'
 else
     alias ls='ls --color=auto'
     alias sdown='sudo shutdown -h now'
     alias reboot='sudo reboot'
     alias sbt='TERM=xterm sbt'
+    alias -s html='opera'
+    alias -s pdf='evince'
+    alias -s png='eog'
+    alias -s jpeg='eog'
+    alias -s jpg='eog'
 fi
 
 alias g=git
@@ -71,7 +78,8 @@ setopt prompt_subst
 
 if [ $(isLinux) = true ]
 then
-  [[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
+    [[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
+    fortune -as
 fi
 
 source ~/.env_variables
