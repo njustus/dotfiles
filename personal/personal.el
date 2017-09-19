@@ -6,7 +6,6 @@
         (height . 55) ; lines
         ))
 
-
 (set-default-font "Source Code Pro-11")
 
                                        ; font size
@@ -17,13 +16,16 @@
 (setq
  prelude-guru nil
  prelude-whitespace nil
+ prelude-use-smooth-scrolling t
  auto-save-default nil
  make-backup-files nil
  ensime-startup-notification nil)
 
 (global-linum-mode 1)
+(menu-bar-mode 1)
 
 (if (string= system-type "darwin")
     (setq mac-right-option-modifier nil))
 
 (prelude-require-package 'ensime)
+(global-set-key (kbd "C-#") 'comment-line)
