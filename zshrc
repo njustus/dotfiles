@@ -45,6 +45,8 @@ then
     #extension alias
     alias -s html='open -a opera'
     alias -s pdf='open -a preview'
+    alias emacs='open -a Emacs'
+    alias work='zsh ~/dotfiles/scripts/setup-work.sh'
 else
     alias ls='ls --color=auto'
     alias sdown='sudo shutdown -h now'
