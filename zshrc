@@ -45,6 +45,8 @@ then
     #extension alias
     alias -s html='open -a opera'
     alias -s pdf='open -a preview'
+    alias -s png='open -a preview'
+    alias -s jpeg='open -a preview'
     alias emacs='open -a Emacs'
     alias work='zsh ~/dotfiles/scripts/setup-work.sh'
 else
@@ -52,6 +54,11 @@ else
     alias sdown='sudo shutdown -h now'
     alias reboot='sudo reboot'
     alias sbt='TERM=xterm sbt'
+    alias -s html='opera'
+    alias -s pdf='evince'
+    alias -s png='eog'
+    alias -s jpeg='eog'
+    alias -s jpg='eog'
 fi
 
 alias g=git
@@ -69,6 +76,15 @@ zstyle ':vcs_info:git*' formats "(%F{cyan}%s%f:%F{yellow}%b%f)"
 
 precmd () { vcs_info }
 setopt prompt_subst
+
+
+if [ $(isLinux) = true ]
+then
+    [[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
+    fortune -as
+fi
+
+source ~/.env_variables
 
 export PROMPT='┌ %F{041}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
 └ %B%F{160}λ.%f%b '

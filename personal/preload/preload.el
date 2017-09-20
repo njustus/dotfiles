@@ -1,1 +1,1 @@
-(setq prelude-theme 'base16-materia)
+(setq prelude-theme 'base16-atelier-sulphurpool)
