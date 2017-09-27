@@ -52,6 +52,7 @@ else
     alias sdown='sudo shutdown -h now'
     alias reboot='sudo reboot'
     alias sbt='TERM=xterm sbt'
+    alias scala='TERM=xterm scala'
     alias -s html='opera'
     alias -s pdf='evince'
     alias -s png='eog'
