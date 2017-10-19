@@ -28,4 +28,3 @@
     (setq mac-right-option-modifier nil))
 
 (prelude-require-package 'ensime)
-(global-set-key (kbd "C-#") 'comment-line)
