@@ -1,1 +1,1 @@
-(setq prelude-theme 'base16-atelier-sulphurpool)
+(setq prelude-theme 'base16-atelier-sulphurpool-light)
