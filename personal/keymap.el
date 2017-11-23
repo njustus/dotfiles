@@ -8,3 +8,4 @@
 (global-set-key (kbd "C-S") 'save-buffer)
 (global-set-key (kbd "C-S-d") 'crux-duplicate-current-line-or-region)
 (global-set-key (kbd "C-P") 'projectile-find-file)
+(global-set-key (kbd "C-Z") 'undo)
