@@ -9,3 +9,4 @@
 (global-set-key (kbd "C-S-d") 'crux-duplicate-current-line-or-region)
 (global-set-key (kbd "C-P") 'projectile-find-file)
 (global-set-key (kbd "C-Z") 'undo)
+(define-key yas-minor-mode-map (kbd "SPC") yas-maybe-expand)

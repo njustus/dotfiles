@@ -23,8 +23,12 @@
 
 (global-linum-mode 1)
 (menu-bar-mode 1)
+(yas-global-mode 1)
 
 (if (string= system-type "darwin")
     (setq mac-right-option-modifier nil))
 
 (prelude-require-package 'ensime)
+(prelude-require-package 'cider)
+(prelude-require-package 'yasnippet)
+(prelude-require-package 'yasnippet-snippets)
