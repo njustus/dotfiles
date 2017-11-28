@@ -35,6 +35,14 @@ function path() {
 function pless() {
   pygmentize $1 | less -R
 }
+function serve() {
+  if [ "$1" != "" ]
+  then
+    python3 -m http.server $1
+  else
+    python3 -m http.server
+  fi
+}
 
 #aliases
 if [ $(isMac) = true ]
@@ -72,8 +80,7 @@ alias path="echo $PATH | tr ':' '\n'"
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' formats "(%F{blue}%s%f:%F{yellow}%b%f)"
-zstyle ':vcs_info:git*' formats "(%F{cyan}%s%f:%F{yellow}%b%f)"
+zstyle ':vcs_info:git*' formats "%F{136}(%F{cyan}%b%F{136})"
 
 precmd () { vcs_info }
 setopt prompt_subst
@@ -90,4 +97,4 @@ source ~/.env_variables
 export PROMPT='┌ %F{041}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
 └ %B%F{160}λ.%f%b '
 
-export RPROMPT='%F{136}$vcs_info_msg_0_'
+export RPROMPT='$vcs_info_msg_0_'

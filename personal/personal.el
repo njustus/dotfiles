@@ -1,4 +1,9 @@
-                                        ; window size
+(prelude-require-package 'ensime)
+(prelude-require-package 'cider)
+(prelude-require-package 'rainbow-delimiters)
+(prelude-require-package 'yasnippet)
+(prelude-require-package 'yasnippet-snippets)
+
 ;; initial window
 (setq initial-frame-alist
       '(
@@ -6,7 +11,7 @@
         (height . 55) ; lines
         ))
 
-(set-default-font "Source Code Pro-11")
+(set-default-font "Hack-10")
 
                                        ; font size
 (if (string= system-type "darwin")
@@ -25,10 +30,7 @@
 (menu-bar-mode 1)
 (yas-global-mode 1)
 
+(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+
 (if (string= system-type "darwin")
     (setq mac-right-option-modifier nil))
-
-(prelude-require-package 'ensime)
-(prelude-require-package 'cider)
-(prelude-require-package 'yasnippet)
-(prelude-require-package 'yasnippet-snippets)
