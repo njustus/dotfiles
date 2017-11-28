@@ -35,6 +35,14 @@ function path() {
 function pless() {
   pygmentize $1 | less -R
 }
+function serve() {
+  if [ "$1" != "" ]
+  then
+    python3 -m http.server $1
+  else
+    python3 -m http.server
+  fi
+}
 
 #aliases
 if [ $(isMac) = true ]
