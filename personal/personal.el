@@ -6,7 +6,7 @@
         (height . 55) ; lines
         ))
 
-(set-default-font "Source Code Pro-11")
+(set-default-font "Roboto Mono-10")
 
                                        ; font size
 (if (string= system-type "darwin")
