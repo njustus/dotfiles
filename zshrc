@@ -98,3 +98,5 @@ export PROMPT='┌ %F{041}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
 └ %B%F{160}λ.%f%b '
 
 export RPROMPT='$vcs_info_msg_0_'
+
+source ~/.zsh-highlighting.zsh
