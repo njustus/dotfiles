@@ -1,5 +1,4 @@
-(prelude-require-package 'ensime)
-(prelude-require-package 'cider)
+(prelude-require-package 'neotree)
 (prelude-require-package 'rainbow-delimiters)
 (prelude-require-package 'yasnippet)
 (prelude-require-package 'yasnippet-snippets)
