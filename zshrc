@@ -1,3 +1,6 @@
+#do nothing if tramp mode
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=100000
@@ -93,15 +96,9 @@ fi
 
 source ~/.env_variables
 
-if [ "$TERM" = 'dumb' ]
-then
-  export PROMPT='> '
-else
 export PROMPT='┌ %F{042}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
 └ %B%F{160}λ.%f%b '
-
 export RPROMPT='$vcs_info_msg_0_'
-fi
 
 
 [[ -f ~/.zsh-highlighting.zsh ]] && source ~/.zsh-highlighting.zsh
