@@ -103,4 +103,5 @@ export PROMPT='┌ %F{042}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
 export RPROMPT='$vcs_info_msg_0_'
 fi
 
-source ~/.zsh-highlighting.zsh
+
+[[ -f ~/.zsh-highlighting.zsh ]] && source ~/.zsh-highlighting.zsh
