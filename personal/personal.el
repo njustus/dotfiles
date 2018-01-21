@@ -23,7 +23,8 @@
  prelude-use-smooth-scrolling t
  auto-save-default nil
  make-backup-files nil
- ensime-startup-notification nil)
+ ensime-startup-notification nil
+ smartparens-global-strict-mode nil)
 
 (global-linum-mode 1)
 (menu-bar-mode 1)
