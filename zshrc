@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100000
+SAVEHIST=100000
 setopt appendhistory autocd extendedglob nomatch prompt_subst
 unsetopt beep notify
 bindkey -e
@@ -76,7 +76,7 @@ alias grep='grep --color=auto'
 alias ll='ls -ahlF'
 alias lsd='ls -d */' #list directories only
 alias path="echo $PATH | tr ':' '\n'"
-
+alias pls="sudo !!"
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
@@ -89,14 +89,17 @@ setopt prompt_subst
 if [ $(isLinux) = true ]
 then
     [[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
-    fortune -as
 fi
 
 source ~/.env_variables
 
-export PROMPT='┌ %F{041}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
+if [ "$TERM" = "tramp" ]
+then
+  export PROMPT='> '
+else
+export PROMPT='┌ %F{042}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
 └ %B%F{160}λ.%f%b '
 
 export RPROMPT='$vcs_info_msg_0_'
-
+fi
 source ~/.zsh-highlighting.zsh
