@@ -106,9 +106,10 @@ module.exports = {
   //   `project#1.0.1`
     plugins: [
         'hyper-statusline',
-        'hyper-ayu-mirage',
         'hypercwd',
-        'hyper-tab-icons'
+        'hyper-tab-icons',
+        'hyper-adventure-time',
+        //'hyper-tabs-enhanced'
     ]
     
     ,
