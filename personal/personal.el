@@ -34,3 +34,5 @@
 
 (if (string= system-type "darwin")
     (setq mac-right-option-modifier nil))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
