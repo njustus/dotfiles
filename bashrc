@@ -72,5 +72,6 @@ source ~/.bash_aliases
 export PS1='┌ \[\e[0;32m\]\u\[\e[m\] at \[\e[0;34m\]\h\[\e[m\] in \[\e[0;36m\]\W\[\e[m\] \[\e[33m\]($(git_info)\[\e[33m\])\n\[\e[m\]└\[\e[1;31m\] λ.\[\e[m\] '
 
 source ~/.system_config
+source ~/.env_variables
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
