@@ -1,5 +1,5 @@
 #do nothing if tramp mode
-[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && eval "$(rbenv init -)" && return
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -102,3 +102,5 @@ export RPROMPT='$vcs_info_msg_0_'
 
 
 [[ -f ~/.zsh-highlighting.zsh ]] && source ~/.zsh-highlighting.zsh
+
+eval "$(rbenv init -)"
