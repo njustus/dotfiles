@@ -2,6 +2,8 @@
 (prelude-require-package 'rainbow-delimiters)
 (prelude-require-package 'yasnippet)
 (prelude-require-package 'yasnippet-snippets)
+(prelude-require-package 'rbenv)
+(prelude-require-package 'robe)
 
 ;; initial window
 (setq initial-frame-alist
@@ -36,3 +38,5 @@
     (setq mac-right-option-modifier nil))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
