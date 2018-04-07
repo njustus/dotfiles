@@ -11,5 +11,4 @@
 	  '(lambda ()
              (ibuffer-auto-mode 1)
              (ibuffer-switch-to-saved-filter-groups "default")
-             (message "ibuffer hook applied"))
-)
+             ))
