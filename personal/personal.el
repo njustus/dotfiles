@@ -2,6 +2,7 @@
 (prelude-require-package 'rainbow-delimiters)
 (prelude-require-package 'yasnippet)
 (prelude-require-package 'yasnippet-snippets)
+(require 'gnutls)
 
 ;; initial window
 (setq initial-frame-alist
@@ -33,4 +34,7 @@
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
 (if (string= system-type "darwin")
-    (setq mac-right-option-modifier nil))
+    (progn
+      (prelude-require-package 'gnutls)
+      (add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem")
+     (setq mac-right-option-modifier nil)))
