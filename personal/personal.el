@@ -2,6 +2,8 @@
 (prelude-require-package 'rainbow-delimiters)
 (prelude-require-package 'yasnippet)
 (prelude-require-package 'yasnippet-snippets)
+(prelude-require-package 'rbenv)
+(prelude-require-package 'robe)
 (require 'gnutls)
 
 ;; initial window
@@ -27,6 +29,8 @@
  ensime-startup-notification nil
  smartparens-global-strict-mode nil)
 
+(global-rbenv-mode 1)
+(global-company-mode 1)
 (global-linum-mode 1)
 (menu-bar-mode 1)
 (yas-global-mode 1)
@@ -38,3 +42,9 @@
       (prelude-require-package 'gnutls)
       (add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem")
      (setq mac-right-option-modifier nil)))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
+
