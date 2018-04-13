@@ -108,7 +108,8 @@ module.exports = {
         'hyper-statusline',
         'hypercwd',
         'hyper-tab-icons',
-        'hyper-adventure-time',
+      'hyper-snazzy'
+//        'hyper-adventure-time',
         //'hyper-tabs-enhanced'
     ]
     
