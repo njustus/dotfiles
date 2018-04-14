@@ -38,7 +38,11 @@
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
 (if (string= system-type "darwin")
-    (setq mac-right-option-modifier nil))
+    (progn
+      (require 'gnutls)
+      (prelude-require-package 'gnutls)
+      (add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem")
+     (setq mac-right-option-modifier nil)))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
