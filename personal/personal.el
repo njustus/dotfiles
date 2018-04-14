@@ -4,6 +4,7 @@
 (prelude-require-package 'yasnippet-snippets)
 (prelude-require-package 'rbenv)
 (prelude-require-package 'robe)
+(prelude-require-package 'company)
 
 ;; initial window
 (setq initial-frame-alist
@@ -41,5 +42,5 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(eval-after-load 'company
+(eval-after-load 'robe-mode
   '(push 'company-robe company-backends))
