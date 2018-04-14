@@ -5,7 +5,7 @@
 (prelude-require-package 'rbenv)
 (prelude-require-package 'robe)
 (prelude-require-package 'multiple-cursors)
-(require 'gnutls)
+(prelude-require-package 'company)
 
 ;; initial window
 (setq initial-frame-alist
@@ -40,11 +40,12 @@
 
 (if (string= system-type "darwin")
     (progn
+      (require 'gnutls)
       (prelude-require-package 'gnutls)
       (add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem")
      (setq mac-right-option-modifier nil)))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(eval-after-load 'company
+(eval-after-load 'robe-mode
   '(push 'company-robe company-backends))
