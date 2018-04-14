@@ -4,6 +4,7 @@
 (prelude-require-package 'yasnippet-snippets)
 (prelude-require-package 'rbenv)
 (prelude-require-package 'robe)
+(prelude-require-package 'multiple-cursors)
 (require 'gnutls)
 
 ;; initial window
@@ -47,4 +48,3 @@
 
 (eval-after-load 'company
   '(push 'company-robe company-backends))
-
