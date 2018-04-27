@@ -46,6 +46,9 @@
      (setq mac-right-option-modifier nil)))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'ruby-mode-hook 'robe-mode)
+;(eval-after-load 'robe-mode
+;  '(push 'company-robe company-backends))
 
-(eval-after-load 'robe-mode
+(eval-after-load 'company
   '(push 'company-robe company-backends))
