@@ -28,7 +28,8 @@
  auto-save-default nil
  make-backup-files nil
  ensime-startup-notification nil
- smartparens-global-strict-mode nil)
+ smartparens-global-strict-mode nil
+ ispell-dictionary "deutsch8")
 
 (global-rbenv-mode 1)
 (global-company-mode 1)

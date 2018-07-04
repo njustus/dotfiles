@@ -80,6 +80,7 @@ alias ll='ls -ahlF'
 alias lsd='ls -d */' #list directories only
 alias path="echo $PATH | tr ':' '\n'"
 alias pls="sudo !!"
+alias em="emacsclient -c"
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
