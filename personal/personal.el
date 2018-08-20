@@ -4,6 +4,7 @@
 (prelude-require-package 'yasnippet-snippets)
 (prelude-require-package 'rbenv)
 (prelude-require-package 'robe)
+(prelude-require-package 'doom-themes)
 (prelude-require-package 'multiple-cursors)
 (prelude-require-package 'company)
 
