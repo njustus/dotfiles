@@ -71,6 +71,9 @@ else
     alias -s png='eog'
     alias -s jpeg='eog'
     alias -s jpg='eog'
+
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
 fi
 
 alias g=git
