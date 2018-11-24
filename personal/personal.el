@@ -9,11 +9,7 @@
 (prelude-require-package 'company)
 
 ;; initial window
-(setq initial-frame-alist
-      '(
-        (width . 170) ; character
-        (height . 55) ; lines
-        ))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (set-default-font "Hack-10")
 
