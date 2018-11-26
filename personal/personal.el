@@ -9,11 +9,7 @@
 (prelude-require-package 'company)
 
 ;; initial window
-(setq initial-frame-alist
-      '(
-        (width . 170) ; character
-        (height . 55) ; lines
-        ))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (set-default-font "Hack-10")
 
@@ -39,13 +35,6 @@
 (yas-global-mode 1)
 
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
-
-(if (string= system-type "darwin")
-    (progn
-      (require 'gnutls)
-      (prelude-require-package 'gnutls)
-      (add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem")
-     (setq mac-right-option-modifier nil)))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'ruby-mode-hook 'robe-mode)
