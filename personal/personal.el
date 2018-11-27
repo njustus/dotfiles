@@ -8,7 +8,7 @@
 (prelude-require-package 'multiple-cursors)
 (prelude-require-package 'company)
 (prelude-require-package 'racer)
-(prelude-require-package 'racer-company)
+(prelude-require-package 'company-racer)
 
 ;; initial window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
