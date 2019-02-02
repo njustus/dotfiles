@@ -11,7 +11,7 @@
 ;; (require 'prelude-evil)
 
 ;;; Programming languages support
-(require 'prelude-c)
+;(require 'prelude-c)
 ;; (require 'prelude-clojure)
 ;; (require 'prelude-coffee)
 ;; (require 'prelude-common-lisp)
@@ -30,12 +30,12 @@
 ;(require 'prelude-perl)
 (require 'prelude-python)
 (require 'prelude-ruby)
-;; (require 'prelude-rust)
+;(require 'prelude-rust)
 (require 'prelude-scala)
 ;(require 'prelude-scheme)
 ;(require 'prelude-shell)
 ;; (require 'prelude-scss)
 ;; (require 'prelude-ts)
 ;; (require 'prelude-web) ;; Emacs mode for web templates
-(require 'prelude-xml)
+;(require 'prelude-xml)
 ;; (require 'prelude-yaml)
