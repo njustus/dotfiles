@@ -68,9 +68,9 @@ else
     alias scala='TERM=xterm scala'
     alias -s html='opera'
     alias -s pdf='evince'
-    alias -s png='eog'
-    alias -s jpeg='eog'
-    alias -s jpg='eog'
+    alias -s png='xdg-open'
+    alias -s jpeg='xdg-open'
+    alias -s jpg='xdg-open'
 
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'
