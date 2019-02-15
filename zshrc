@@ -74,6 +74,7 @@ else
 
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'
+    alias upgrade='sudo aptitude update && sudo aptitude safe-upgrade'
 fi
 
 alias g=git
