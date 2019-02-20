@@ -13,6 +13,8 @@
 ;; initial window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+(add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-mode))
+
 (set-default-font "Hack-10")
 
                                        ; font size
