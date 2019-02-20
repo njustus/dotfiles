@@ -10,6 +10,6 @@
 (global-set-key (kbd "C-P") 'projectile-find-file)
 (global-set-key (kbd "C-Z") 'undo)
 
-(global-set-key (kbd "C->") 'mc/mark-next-lines)
+(global-set-key (kbd "C-<") 'mc/edit-lines)
 
 (define-key yas-minor-mode-map (kbd "TAB") yas-maybe-expand)
