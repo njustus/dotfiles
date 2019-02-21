@@ -26,6 +26,6 @@ echo "setup prelude"
 ln -s $current/personal ~/.emacs.d/personal
 
 echo "setup sbt plugins"
-sbt_plugins_path=~/.sbt/0.13/plugins
+sbt_plugins_path=~/.sbt/1.0/plugins
 mkdir -p $sbt_plugins_path
 ln -sf $current/sbt/plugins.sbt $sbt_plugins_path/plugins.sbt
