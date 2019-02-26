@@ -39,6 +39,8 @@
 (yas-global-mode 1)
 
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'scala-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'typescript-mode-hook 'rainbow-delimiters-mode)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'ruby-mode-hook 'robe-mode)
