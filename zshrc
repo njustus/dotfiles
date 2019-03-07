@@ -1,111 +1,100 @@
-#do nothing if tramp mode
-[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && eval "$(rbenv init -)" && return
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=100000
-SAVEHIST=100000
-setopt appendhistory autocd extendedglob nomatch prompt_subst
-unsetopt beep notify
-bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/nico/.zshrc'
+# Path to your oh-my-zsh installation.
+  export ZSH=~/.oh-my-zsh
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
-export EDITOR=vim #default editor
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-#setup lookup for system type
-system=$(uname -s)
-function isMac() {
-  case $system in
-    "Darwin") echo true ;;
-    *) echo false ;;
-  esac
-}
-function isLinux() {
-  case $system in
-    "Linux") echo true ;;
-    *) echo false ;;
-  esac
-}
-function path() {
-  echo $(pwd)/$1
-}
-function pless() {
-  pygmentize $1 | less -R
-}
-function serve() {
-  if [ "$1" != "" ]
-  then
-    python3 -m http.server $1
-  else
-    python3 -m http.server
-  fi
-}
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-#aliases
-if [ $(isMac) = true ]
-then
-    alias ls='ls -G'
-    alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-    #extension alias
-    alias -s html='open -a opera'
-    alias -s pdf='open -a preview'
-    alias -s png='open -a preview'
-    alias -s jpeg='open -a preview'
-    alias emacs='open -a Emacs'
-    alias work='zsh ~/dotfiles/scripts/setup-work.sh'
-else
-    alias ls='ls --color=auto'
-    alias sdown='sudo shutdown -h now'
-    alias reboot='sudo reboot'
-    alias sbt='TERM=xterm sbt'
-    alias scala='TERM=xterm scala'
-    alias -s html='opera'
-    alias -s pdf='evince'
-    alias -s png='xdg-open'
-    alias -s jpeg='xdg-open'
-    alias -s jpg='xdg-open'
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-    alias pbcopy='xclip -selection clipboard'
-    alias pbpaste='xclip -selection clipboard -o'
-    alias upgrade='sudo aptitude update && sudo aptitude safe-upgrade'
-fi
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-alias g=git
-alias grep='grep --color=auto'
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-alias ll='ls -ahlF'
-alias lsd='ls -d */' #list directories only
-alias path="echo $PATH | tr ':' '\n'"
-alias pls="sudo !!"
-alias em="emacsclient -c"
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git*' formats "%F{136}(%F{cyan}%b%F{136})"
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-precmd () { vcs_info }
-setopt prompt_subst
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-if [ $(isLinux) = true ]
-then
-    [[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
-fi
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
 
-source ~/.env_variables
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-export PROMPT='┌ %F{042}%n %fat %F{039}%m %fin %B%F{163}%c %f%b
-└ %B%F{160}λ.%f%b '
-export RPROMPT='$vcs_info_msg_0_'
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git rbenv)
 
+source $ZSH/oh-my-zsh.sh
 
-[[ -f ~/.zsh-highlighting.zsh ]] && source ~/.zsh-highlighting.zsh
+# User configuration
 
-eval "$(rbenv init -)"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+export EDITOR='vim'
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+DF=~/dotfiles
+source $DF/zsh_aliases.sh
