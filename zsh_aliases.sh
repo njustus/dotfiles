@@ -26,3 +26,5 @@ else
     alias pbpaste='xclip -selection clipboard -o'
     alias upgrade='sudo aptitude update && sudo aptitude safe-upgrade'
 fi
+
+alias mkube='kubectl -n=microservices'
