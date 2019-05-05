@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,5 +98,8 @@ export EDITOR='vim'
 
 DF=~/dotfiles
 source $DF/zsh_aliases.sh
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export SBT_OPTS="-Xmx3G"
+export PATH=$PATH:$HOME/.cargo/bin
 
 eval "$(rbenv init -)"
