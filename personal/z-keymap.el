@@ -13,4 +13,4 @@
 (global-set-key (kbd "C-<") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 
-(define-key yas-minor-mode-map (kbd "TAB") yas-maybe-expand)
+;(define-key yas-minor-mode-map (kbd "TAB") yas-maybe-expand)
