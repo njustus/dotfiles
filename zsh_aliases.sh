@@ -28,3 +28,6 @@ else
 fi
 
 alias mkube='kubectl -n=microservices'
+alias dcl='docker container ls'
+alias dcst='docker container stop'
+alias dil='docker image ls'
