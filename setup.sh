@@ -6,6 +6,7 @@ echo "setup bash"
 ln -sf $current/bashrc ~/.bashrc
 ln -sf $current/zshrc ~/.zshrc
 ln -sf $current/bash_aliases ~/.bash_aliases
+ln -sf $current/tmux.conf ~/.tmux.conf
 cp -f $current/env_variables ~/.env_variables
 cp -f $current/system_config ~/.system_config
 
