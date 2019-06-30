@@ -48,3 +48,7 @@
 
 (eval-after-load 'company
   '(push 'company-robe company-backends))
+
+(if (string= system-type "darwin")
+    (global-set-key (kbd "M-ß") (lambda () (interactive) (insert "\\")) )
+  )
