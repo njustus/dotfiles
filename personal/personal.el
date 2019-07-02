@@ -30,9 +30,9 @@
  make-backup-files nil
  ensime-startup-notification nil
  smartparens-global-strict-mode nil
- yas-global-mode 1
  ispell-dictionary "deutsch8")
 
+(yas-global-mode 1)
 (global-rbenv-mode 1)
 (global-company-mode 1)
 (global-linum-mode 1)
