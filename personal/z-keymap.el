@@ -14,3 +14,6 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 
 (define-key yas-minor-mode-map (kbd "TAB") yas-maybe-expand)
+
+(if (string= system-type "darwin")
+    (global-set-key (kbd "M-ß") (lambda () (interactive) (insert "\\"))))
