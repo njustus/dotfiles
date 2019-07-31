@@ -1,5 +1,5 @@
-(if (eq system-type 'gnu/linux)
-    (setq prelude-theme 'apropospriate-dark))
+(setq prelude-theme 'apropospriate-dark)
+;; (if (eq system-type 'gnu/linux))
  ; (setq prelude-theme 'apropospriate-light))
 
 (if (string= system-type "darwin")
