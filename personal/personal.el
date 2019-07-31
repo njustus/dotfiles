@@ -1,14 +1,15 @@
-(prelude-require-package 'neotree)
-(prelude-require-package 'rainbow-delimiters)
-(prelude-require-package 'yasnippet)
-(prelude-require-package 'yasnippet-snippets)
-(prelude-require-package 'rbenv)
-(prelude-require-package 'robe)
-(prelude-require-package 'doom-themes)
-(prelude-require-package 'multiple-cursors)
-(prelude-require-package 'company)
-(prelude-require-package 'racer)
-(prelude-require-package 'company-racer)
+(prelude-require-packages '(neotree
+                            rainbow-delimiters
+                            yasnippet
+                            yasnippet-snippets
+                            multiple-cursors
+                            company
+                            lsp-mode
+                            company-lsp))
+(prelude-require-packages '(doom-themes
+                            base16-theme
+                            apropospriate-theme))
+(prelude-require-packages '(rbenv))
 
 ;; initial window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -16,7 +17,6 @@
 (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-mode))
 
 (set-default-font "Hack-10")
-
                                        ; font size
 (if (string= system-type "darwin")
     (set-face-attribute 'default nil :height 120)
@@ -28,7 +28,6 @@
  prelude-use-smooth-scrolling t
  auto-save-default nil
  make-backup-files nil
- ensime-startup-notification nil
  smartparens-global-strict-mode nil
  ispell-dictionary "deutsch8")
 
@@ -43,13 +42,3 @@
 (add-hook 'typescript-mode-hook 'rainbow-delimiters-mode)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'ruby-mode-hook 'robe-mode)
-;(eval-after-load 'robe-mode
-;  '(push 'company-robe company-backends))
-
-(eval-after-load 'company
-  '(push 'company-robe company-backends))
-
-(if (string= system-type "darwin")
-    (global-set-key (kbd "M-ß") (lambda () (interactive) (insert "\\")) )
-  )
