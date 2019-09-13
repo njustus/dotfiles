@@ -1,4 +1,4 @@
-(setq prelude-theme 'apropospriate-dark)
+(setq prelude-theme 'doom-palenight)
 ;; (if (eq system-type 'gnu/linux))
  ; (setq prelude-theme 'apropospriate-light))
 
