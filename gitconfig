@@ -1,3 +1,5 @@
+[core]
+  excludesfile = ~/.gitignore_global
 
 [color "status"]
   added = yellow
