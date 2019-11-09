@@ -5,6 +5,7 @@
                             multiple-cursors
                             company
                             lsp-mode
+                            lsp-ui
                             company-lsp))
 (prelude-require-packages '(doom-themes
                             base16-theme
