@@ -68,6 +68,7 @@ plugins=(
         rbenv
         docker
         colored-man-pages
+        mvn
         )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,8 +105,12 @@ export EDITOR='vim'
 
 DF=~/dotfiles
 source $DF/zsh_aliases.sh
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 export SBT_OPTS="-Xmx3G"
 export PATH=$PATH:$HOME/.cargo/bin
 
-eval "$(rbenv init -)"
+if [ $(isMac) ]
+then
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
+else
+    echo "CONFIGURE JAVA!"
+fi
