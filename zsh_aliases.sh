@@ -11,7 +11,7 @@ function emf() {
   emacsclient -a '' -nc $@
 }
 function em() {
-  emacsclient -a '' -w $@
+  emacsclient -a '' -t $@
 }
 
 #aliases

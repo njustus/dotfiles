@@ -108,9 +108,8 @@ source $DF/zsh_aliases.sh
 export SBT_OPTS="-Xmx3G"
 export PATH=$PATH:$HOME/.cargo/bin
 
-if [ $(isMac) ]
-then
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
+if [ isMac = true ]; then
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
 else
-    echo "CONFIGURE JAVA!"
+  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 fi
