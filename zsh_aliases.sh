@@ -7,6 +7,13 @@ function isMac() {
     esac
 }
 
+function emf() {
+  emacsclient -a '' -nc $@
+}
+function em() {
+  emacsclient -a '' -w $@
+}
+
 #aliases
 if [ $(isMac) = true ]
 then
