@@ -1,6 +1,4 @@
-(setq prelude-theme 'doom-palenight)
-;; (if (eq system-type 'gnu/linux))
- ; (setq prelude-theme 'apropospriate-light))
+(setq prelude-theme 'doom-moonlight)
 
 (if (string= system-type "darwin")
     (progn

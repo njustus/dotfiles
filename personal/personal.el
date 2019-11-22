@@ -4,13 +4,10 @@
                             yasnippet-snippets
                             multiple-cursors
                             company
-                            lsp-mode
-                            lsp-ui
-                            company-lsp))
-(prelude-require-packages '(doom-themes
-                            base16-theme
-                            apropospriate-theme))
-(prelude-require-packages '(rbenv))
+                            lsp-java
+                            rbenv))
+
+(prelude-require-packages '(doom-themes))
 
 ;; initial window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
