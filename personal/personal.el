@@ -6,7 +6,8 @@
                             company
                             lsp-java
                             rbenv
-                            neotree))
+                            neotree
+                            all-the-icons))
 
 (prelude-require-packages '(doom-themes))
 
@@ -28,7 +29,8 @@
  auto-save-default nil
  make-backup-files nil
  smartparens-global-strict-mode nil
- ispell-dictionary "deutsch8")
+ ispell-dictionary "deutsch8"
+ neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 (yas-global-mode 1)
 (global-rbenv-mode 1)

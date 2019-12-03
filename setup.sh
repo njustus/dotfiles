@@ -25,6 +25,7 @@ mv ~/vim ~/.vim
 
 echo "setup prelude"
 ln -s $current/personal ~/.emacs.d/personal
+echo "[INFO] install needed icon fonts: 'M-x all-the-icons-install-fonts'"
 
 echo "setup sbt plugins"
 sbt_plugins_path=~/.sbt/1.0/plugins
