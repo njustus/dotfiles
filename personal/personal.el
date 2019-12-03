@@ -5,7 +5,8 @@
                             multiple-cursors
                             company
                             lsp-java
-                            rbenv))
+                            rbenv
+                            neotree))
 
 (prelude-require-packages '(doom-themes))
 
