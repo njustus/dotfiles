@@ -17,10 +17,7 @@
 
 (global-set-key [f8] 'neotree-toggle)
 
+(eval-after-load 'tide '(define-key 'tide-mode-map (kbd "M-RET") 'tide-fix))
 
-(define-key yas-minor-mode-map (kbd "TAB") yas-maybe-expand)
-
-(eval-after-load 'tide '(define-key tide-mode-map (kbd "M-RET") 'tide-fix))
-\
 (if (string= system-type "darwin")
     (global-set-key (kbd "M-ß") (lambda () (interactive) (insert "\\"))))
