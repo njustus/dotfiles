@@ -39,3 +39,4 @@ alias dcl='docker container ls'
 alias dcst='docker container stop'
 alias dil='docker image ls'
 alias dce='docker container exec -it'
+alias store="sudo bash data/Docs/automation/store.sh"
