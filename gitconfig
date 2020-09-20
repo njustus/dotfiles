@@ -19,6 +19,9 @@
 [editor]
   editor = vim
 
+[pull]
+  rebase = false
+
 [alias]
   f = fetch --all --prune
   br = branch
