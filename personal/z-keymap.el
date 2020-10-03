@@ -16,6 +16,7 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 
 (global-set-key [f8] 'neotree-toggle)
+(global-set-key [C-tab] 'company-complete)
 
 (eval-after-load 'tide '(define-key 'tide-mode-map (kbd "M-RET") 'tide-fix))
 

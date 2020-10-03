@@ -1,16 +1,10 @@
-(prelude-require-packages '(neotree
-                            rainbow-delimiters
+(prelude-require-packages '(rainbow-delimiters
                             yasnippet
                             yasnippet-snippets
                             multiple-cursors
-                            company
-                            lsp-java
-                            rbenv
                             neotree
                             all-the-icons
                             ))
-
-(prelude-require-packages '(doom-themes))
 
 ;; initial window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -37,7 +31,6 @@
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 (yas-global-mode 1)
-(global-rbenv-mode 1)
 (global-company-mode 1)
 (global-linum-mode 1)
 (menu-bar-mode 1)
