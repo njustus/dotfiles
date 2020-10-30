@@ -1,10 +1,11 @@
 (require 'ibuffer)
 (setq ibuffer-saved-filter-groups
       '(("default"
-         ("controllers" (filename . "app/controllers/"))
-         ("models" (filename . "app/models/"))
-         ("views" (filename . "app/views/"))
+         ("controllers" (filename . "controllers"))
+         ("models" (filename . "models"))
+         ("views" (filename . "views"))
          ("emacs" (mode . emacs-lisp-mode))
+         ("dired" (mode . dired-mode))
          )))
 
 (add-hook 'ibuffer-mode-hook

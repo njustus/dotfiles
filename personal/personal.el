@@ -21,6 +21,7 @@
  prelude-guru nil
  prelude-whitespace nil
  prelude-use-smooth-scrolling t
+ prelude-format-on-save nil
  auto-save-default nil
  make-backup-files nil
  smartparens-global-strict-mode nil
@@ -31,7 +32,6 @@
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 (yas-global-mode 1)
-(global-company-mode 1)
 (global-linum-mode 1)
 (menu-bar-mode 1)
 
