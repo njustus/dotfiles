@@ -4,6 +4,8 @@
                             multiple-cursors
                             neotree
                             all-the-icons
+                            dired-narrow
+                            dired-subtree
                             ))
 
 ;; initial window

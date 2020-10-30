@@ -20,5 +20,8 @@
 
 (eval-after-load 'tide '(define-key 'tide-mode-map (kbd "M-RET") 'tide-fix))
 
+(eval-after-load 'dired '(define-key dired-mode-map [tab] 'dired-subtree-toggle))
+(eval-after-load 'dired '(define-key dired-mode-map "/" 'dired-narrow))
+
 (if (string= system-type "darwin")
     (global-set-key (kbd "M-ß") (lambda () (interactive) (insert "\\"))))
