@@ -28,10 +28,9 @@
  make-backup-files nil
  smartparens-global-strict-mode nil
  ispell-dictionary "deutsch8"
- )
-
-;icons in neotree
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+ neo-theme (if (display-graphic-p) 'icons 'arrow)
+ initial-major-mode 'org-mode
+ initial-scratch-message "# scratch buffer for notes")
 
 (yas-global-mode 1)
 (global-linum-mode 1)
