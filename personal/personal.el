@@ -30,7 +30,8 @@
  ispell-dictionary "deutsch8"
  neo-theme (if (display-graphic-p) 'icons 'arrow)
  initial-major-mode 'org-mode
- initial-scratch-message "# scratch buffer for notes")
+ initial-scratch-message "# scratch buffer for notes"
+ mac-right-option-modifier nil)
 
 (yas-global-mode 1)
 (global-linum-mode 1)
