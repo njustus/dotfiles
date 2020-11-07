@@ -114,6 +114,6 @@ else
   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 fi
 
-if [ $(which exa) ]; then
+if [ -x exa ]; then
     alias ls="exa";
 fi
