@@ -15,6 +15,9 @@
 (global-set-key (kbd "C-<") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 
+(global-set-key [C-left] 'left-word)
+(global-set-key [C-right]  'right-word)
+
 (global-set-key [f8] 'neotree-toggle)
 (global-set-key [C-tab] 'company-complete)
 
