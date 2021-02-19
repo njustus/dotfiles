@@ -12,8 +12,7 @@
 (global-set-key (kbd "C-Z") 'undo)
 
 ; multiple cursors
-(global-set-key (kbd "C-<") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-d") 'mc/mark-next-like-this)
 
 (global-set-key [C-left] 'left-word)
 (global-set-key [C-right]  'right-word)
