@@ -2,7 +2,7 @@
 (define-key isearch-mode-map "\C-f" 'isearch-repeat-forward)
 
 (global-set-key (kbd "C-#") 'comment-line)
-(global-set-key (kbd "C-O") 'find-file)
+(global-set-key (kbd "C-O") 'counsel-find-file)
 (global-set-key (kbd "M-1") 'delete-other-windows)
 (global-set-key (kbd "M-2") 'split-window-right)
 (global-set-key (kbd "M-3") 'split-window-below)
@@ -13,7 +13,7 @@
 
 ; multiple cursors
 (global-set-key (kbd "C-<") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-d") 'mc/mark-next-like-this)
 
 (global-set-key [f8] 'neotree-toggle)
 (global-set-key [C-tab] 'company-complete)
