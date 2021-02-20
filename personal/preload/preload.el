@@ -1,1 +1,1 @@
-(setq prelude-theme 'doom-palenight)
+(setq prelude-theme 'doom-one)

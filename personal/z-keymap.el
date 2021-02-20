@@ -15,13 +15,16 @@
 (global-set-key (kbd "C-<") 'mc/edit-lines)
 (global-set-key (kbd "C-d") 'mc/mark-next-like-this)
 
+(global-set-key [C-left] 'left-word)
+(global-set-key [C-right]  'right-word)
+
 (global-set-key [f8] 'neotree-toggle)
 (global-set-key [C-tab] 'company-complete)
 
 (eval-after-load 'tide '(define-key 'tide-mode-map (kbd "M-RET") 'tide-fix))
 
-(eval-after-load 'dired '(define-key dired-mode-map [tab] 'dired-subtree-toggle))
-(eval-after-load 'dired '(define-key dired-mode-map "/" 'dired-narrow))
+(define-key dired-mode-map [tab] 'dired-subtree-toggle)
+(define-key dired-mode-map "/" 'dired-narrow)
 
 (if (string= system-type "darwin")
     (global-set-key (kbd "M-ß") (lambda () (interactive) (insert "\\"))))
