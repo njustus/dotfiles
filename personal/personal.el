@@ -39,7 +39,7 @@
 
 
 (yas-global-mode 1)
-(global-linum-mode 1)
+(global-linum-mode 0)
 (menu-bar-mode 1)
 
 
