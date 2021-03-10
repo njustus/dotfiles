@@ -22,7 +22,6 @@
 
 (global-set-key [f8] 'neotree-toggle)
 (global-set-key [C-tab] 'company-complete)
-
 (global-set-key [C-next] 'centaur-tabs-forward)
 (global-set-key [C-prior] 'centaur-tabs-backward)
 

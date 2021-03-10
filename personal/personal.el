@@ -32,7 +32,8 @@
  neo-theme (if (display-graphic-p) 'icons 'arrow)
  initial-major-mode 'org-mode
  initial-scratch-message "# scratch buffer for notes"
- mac-right-option-modifier nil)
+ mac-right-option-modifier nil
+ sp-override-key-bindings (quote (("C-<right>") ("C-<left>")))
 
 (cua-mode)
 (centaur-tabs-mode t)
@@ -42,9 +43,6 @@
 (global-linum-mode 0)
 (menu-bar-mode 1)
 
-
-(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'scala-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'typescript-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
