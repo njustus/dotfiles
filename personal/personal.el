@@ -6,6 +6,7 @@
                             all-the-icons
                             dired-narrow
                             dired-subtree
+                            centaur-tabs
                             ))
 
 ;; initial window
@@ -33,9 +34,14 @@
  initial-scratch-message "# scratch buffer for notes"
  mac-right-option-modifier nil)
 
+(cua-mode)
+(centaur-tabs-mode t)
+
+
 (yas-global-mode 1)
-(global-linum-mode 1)
+(global-linum-mode 0)
 (menu-bar-mode 1)
+
 
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'scala-mode-hook 'rainbow-delimiters-mode)
