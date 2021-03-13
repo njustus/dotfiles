@@ -7,7 +7,7 @@
                             dired-narrow
                             dired-subtree
                             centaur-tabs
-                            ))
+                            intellij-theme))
 
 ;; initial window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))

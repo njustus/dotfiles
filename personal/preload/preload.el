@@ -1,1 +1,1 @@
-(setq prelude-theme 'doom-one)
+(setq prelude-theme 'intellij)
