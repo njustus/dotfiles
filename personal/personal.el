@@ -32,8 +32,7 @@
  neo-theme (if (display-graphic-p) 'icons 'arrow)
  initial-major-mode 'org-mode
  initial-scratch-message "# scratch buffer for notes"
- mac-right-option-modifier nil
- sp-override-key-bindings (quote (("C-<right>") ("C-<left>")))
+ mac-right-option-modifier nil)
 
 (cua-mode)
 (centaur-tabs-mode t)

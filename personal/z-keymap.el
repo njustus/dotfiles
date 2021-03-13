@@ -30,5 +30,8 @@
 (define-key dired-mode-map [tab] 'dired-subtree-toggle)
 (define-key dired-mode-map "/" 'dired-narrow)
 
+(define-key smartparens-mode-map (kbd "C-<left>") nil)
+(define-key smartparens-mode-map (kbd "C-<right>") nil)
+
 (if (string= system-type "darwin")
     (global-set-key (kbd "M-ß") (lambda () (interactive) (insert "\\"))))
