@@ -25,13 +25,15 @@
 (global-set-key [C-next] 'centaur-tabs-forward)
 (global-set-key [C-prior] 'centaur-tabs-backward)
 
-(eval-after-load 'tide '(define-key 'tide-mode-map (kbd "M-RET") 'tide-fix))
+;(eval-after-load 'tide '(define-key 'tide-mode-map (kbd "M-RET") 'tide-fix))
 
 (define-key dired-mode-map [tab] 'dired-subtree-toggle)
 (define-key dired-mode-map "/" 'dired-narrow)
 
 (define-key smartparens-mode-map (kbd "C-<left>") nil)
 (define-key smartparens-mode-map (kbd "C-<right>") nil)
+
+(define-key lsp-mode-map (kbd "M-RET") 'lsp-execute-code-action)
 
 (if (string= system-type "darwin")
     (global-set-key (kbd "M-ß") (lambda () (interactive) (insert "\\"))))
