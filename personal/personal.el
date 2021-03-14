@@ -30,10 +30,13 @@
  smartparens-global-strict-mode nil
  ispell-dictionary "deutsch8"
  neo-theme (if (display-graphic-p) 'icons 'arrow)
- initial-major-mode 'org-mode
- initial-scratch-message "# scratch buffer for notes"
  mac-right-option-modifier nil
  cursor-type 'bar)
+
+; org mode
+(setq initial-scratch-message "# scratch buffer for notes"
+      org-support-shift-select t)
+(add-hook 'org-mode-hook 'smartparens-mode)
 
 (cua-mode)
 (centaur-tabs-mode t)
