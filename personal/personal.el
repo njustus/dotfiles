@@ -32,11 +32,11 @@
  neo-theme (if (display-graphic-p) 'icons 'arrow)
  initial-major-mode 'org-mode
  initial-scratch-message "# scratch buffer for notes"
- mac-right-option-modifier nil)
+ mac-right-option-modifier nil
+ cursor-type 'bar)
 
 (cua-mode)
 (centaur-tabs-mode t)
-
 
 (yas-global-mode 1)
 (global-linum-mode 0)
