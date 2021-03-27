@@ -109,6 +109,8 @@ export SBT_OPTS="-Xmx3G"
 export PATH=$PATH:$HOME/.cargo/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-if [ -x exa ]; then
+if $(type exa &> /dev/null); then
     alias ls="exa";
+    alias ll="exa -lh";
+    alias la="exa -ha";
 fi
