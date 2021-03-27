@@ -6,7 +6,6 @@
                             all-the-icons
                             dired-narrow
                             dired-subtree
-                            centaur-tabs
                             base16-theme))
 
 ;; initial window
@@ -39,7 +38,6 @@
 (add-hook 'org-mode-hook 'smartparens-mode)
 
 (cua-mode)
-(centaur-tabs-mode t)
 
 (yas-global-mode 1)
 (global-linum-mode 0)
