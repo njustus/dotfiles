@@ -44,3 +44,9 @@
   amend = commit --amend --no-edit
   patch = add --patch
   merged = branch --merged
+
+[include]
+    path = ~/.git-safedirs
+
+[includeIf "gitdir:~/data/detim/"]
+    path = ~/.gitconfig-work
