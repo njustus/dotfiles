@@ -20,6 +20,14 @@ cp -r $current/vim ~/vim
 rm -r ~/.vim
 mv ~/vim ~/.vim
 
+echo "setup starship"
+ln -sf $current/starship.toml ~/.config/starship.toml
+
+echo "setup nushell"
+mkdir -p ~/.config/nushell
+ln -sf $current/nushell/env.nu ~/.config/nushell/env.nu
+ln -sf $current/nushell/config.nu ~/.config/nushell/config.nu
+
 #ln -sf $current/emacs ~/.emacs
 echo "setup prelude"
 curl -L https://git.io/epre | sh
