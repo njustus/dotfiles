@@ -543,4 +543,21 @@ let-env config = {
   ]
 }
 
+alias upgrade = sudo aptitude update and sudo aptitude safe-upgrade
+
+# mvn
+alias mvnc = mvn clean compile
+alias mvnct = mvn clean test-compile
+
+# clipboard
+alias pbcopy = xclip -selection clipboard
+alias pbpaste = xclip -selection clipboard -o
+
+alias k = kubectl
+
+# docker
+alias d = docker
+alias dcl = docker container ls
+alias dil = docker image ls
+
 source ~/.cache/starship/init.nu
