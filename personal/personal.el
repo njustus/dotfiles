@@ -46,3 +46,5 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(add-hook 'scala-mode-hook 'lsp-mode)
