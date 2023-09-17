@@ -6,7 +6,8 @@
                             all-the-icons
                             dired-narrow
                             dired-subtree
-                            base16-theme))
+                            base16-theme
+                            org-modern))
 
 ;; initial window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -34,13 +35,15 @@
 
 ; org mode
 (setq initial-scratch-message "# scratch buffer for notes"
-      org-support-shift-select t)
+      org-support-shift-select t
+      org-adapt-indentation t
+      org-hide-emphasis-markers t)
 (add-hook 'org-mode-hook 'smartparens-mode)
+(with-eval-after-load 'org (global-org-modern-mode))
 
 (cua-mode)
 
 (yas-global-mode 1)
-(global-linum-mode 0)
 (menu-bar-mode 1)
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
@@ -48,3 +51,8 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (add-hook 'scala-mode-hook 'lsp-mode)
+
+(org-babel-do-load-languages 'org-babel-load-languages
+                             '(
+                               (shell . t)
+                               ))
