@@ -34,9 +34,18 @@ else
     alias upgrade='sudo aptitude update && sudo aptitude safe-upgrade'
 fi
 
-alias mkube='kubectl -n=microservices'
+alias store="sudo bash data/Docs/automation/store.sh"
+
+# sort json
+alias jqs="jq -S . "
+
+# docker
 alias dcl='docker container ls'
 alias dcst='docker container stop'
 alias dil='docker image ls'
 alias dce='docker container exec -it'
-alias store="sudo bash data/Docs/automation/store.sh"
+
+# kubernetes
+alias mkube='kubectl -n=microservices'
+alias k=kubectl
+alias ka='kubectl -n=amaxo-rms'
