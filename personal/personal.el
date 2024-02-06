@@ -37,7 +37,9 @@
 (setq initial-scratch-message "# scratch buffer for notes"
       org-support-shift-select t
       org-adapt-indentation t
-      org-hide-emphasis-markers t)
+      org-hide-emphasis-markers t
+      org-agenda-files '("~/Documents/org")
+      )
 (add-hook 'org-mode-hook 'smartparens-mode)
 (with-eval-after-load 'org (global-org-modern-mode))
 

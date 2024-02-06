@@ -110,6 +110,11 @@ export SBT_OPTS="-Xmx3G"
 export PATH=$PATH:$HOME/.cargo/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+if $(type zoxide &> /dev/null); then
+  eval "$(zoxide init zsh)"
+  alias cd=z
+fi
+
 if $(type exa &> /dev/null); then
     alias ls="exa";
     alias ll="exa -lh";

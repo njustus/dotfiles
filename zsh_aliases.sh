@@ -35,6 +35,7 @@ else
 fi
 
 alias store="sudo bash data/Docs/automation/store.sh"
+alias timestamp="date +%s"
 
 # sort json
 alias jqs="jq -S . "
