@@ -107,7 +107,8 @@ export EDITOR='vim'
 DF=~/dotfiles
 source $DF/zsh_aliases.sh
 export SBT_OPTS="-Xmx3G"
-export PATH=$PATH:$HOME/.cargo/bin
+# export PATH=/opt/homebrew/opt/node@16/bin:$PATH:$HOME/.cargo/bin
+export PATH=/opt/homebrew/opt/node@18/bin:$PATH:$HOME/.cargo/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 if $(type zoxide &> /dev/null); then
@@ -116,7 +117,9 @@ if $(type zoxide &> /dev/null); then
 fi
 
 if $(type exa &> /dev/null); then
-    alias ls="exa";
-    alias ll="exa -lh";
-    alias la="exa -ha";
+    alias ls="exa --icons";
+    alias ll="exa -lh --icons";
+    alias la="exa -ha --icons";
 fi
+
+#eval "$(starship init zsh)"
