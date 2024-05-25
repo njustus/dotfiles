@@ -19,4 +19,4 @@ set tabstop=2 "Setup tab to 2 blanks
 set shiftwidth=2
 set expandtab
 "set background=dark
-"colorscheme hybrid
+colorscheme hybrid
