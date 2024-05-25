@@ -2,6 +2,7 @@
 (define-key isearch-mode-map "\C-f" 'isearch-repeat-forward)
 
 (global-set-key (kbd "C-#") 'comment-line)
+(global-set-key (kbd "C-/") 'comment-line)
 (global-set-key (kbd "C-O") 'counsel-find-file)
 (global-set-key (kbd "M-1") 'delete-other-windows)
 (global-set-key (kbd "M-2") 'split-window-right)
