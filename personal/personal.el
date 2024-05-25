@@ -7,6 +7,8 @@
                             dired-narrow
                             dired-subtree
                             base16-theme
+                            doom-themes
+                            format-all
                             org-modern))
 
 ;; initial window
