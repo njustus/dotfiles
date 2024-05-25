@@ -122,4 +122,4 @@ if $(type exa &> /dev/null); then
     alias la="exa -ha --icons";
 fi
 
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"
