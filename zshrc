@@ -108,7 +108,7 @@ DF=~/dotfiles
 source $DF/zsh_aliases.sh
 export SBT_OPTS="-Xmx3G"
 # export PATH=/opt/homebrew/opt/node@16/bin:$PATH:$HOME/.cargo/bin
-export PATH=/opt/homebrew/opt/node@18/bin:$PATH:$HOME/.cargo/bin
+export PATH=/opt/homebrew/opt/node@20/bin:$PATH:$HOME/.cargo/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 if $(type zoxide &> /dev/null); then
