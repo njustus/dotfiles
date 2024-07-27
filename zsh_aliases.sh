@@ -50,6 +50,7 @@ alias dcl='docker container ls'
 alias dcst='docker container stop'
 alias dil='docker image ls'
 alias dce='docker container exec -it'
+alias compose=docker-compose
 
 # kubernetes
 alias mkube='kubectl -n=microservices'

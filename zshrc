@@ -116,10 +116,10 @@ if $(type zoxide &> /dev/null); then
   alias cd=z
 fi
 
-if $(type exa &> /dev/null); then
-    alias ls="exa --icons";
-    alias ll="exa -lh --icons";
-    alias la="exa -ha --icons";
+if $(type eza &> /dev/null); then
+    alias ls="eza --icons";
+    alias ll="eza -lh --icons";
+    alias la="eza -ha --icons";
 fi
 
 eval "$(starship init zsh)"
