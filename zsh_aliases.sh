@@ -14,9 +14,14 @@ function em() {
   emacsclient -a '' -t $@
 }
 
+# Define the function
+function path() {
+	local name=$1
+	echo $PWD/$name
+}
+
 #aliases
-if [ $(isMac) = true ]
-then
+if [ $(isMac) = true ]; then
     #extension alias
     alias -s html='open -a firefox'
     alias -s pdf='open -a preview'
