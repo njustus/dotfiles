@@ -106,7 +106,7 @@ export EDITOR='vim'
 
 DF=~/dotfiles
 source $DF/zsh_aliases.sh
-export SBT_OPTS="-Xmx3G"
+export SBT_OPTS="-Xmx4G"
 # export PATH=/opt/homebrew/opt/node@16/bin:$PATH:$HOME/.cargo/bin
 export PATH=/opt/homebrew/opt/node@20/bin:$PATH:$HOME/.cargo/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -114,6 +114,10 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 if $(type zoxide &> /dev/null); then
   eval "$(zoxide init zsh)"
   alias cd=z
+fi
+
+if $(type fzf &> /dev/null); then
+  source <(fzf --zsh)
 fi
 
 if $(type eza &> /dev/null); then
