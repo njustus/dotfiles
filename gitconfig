@@ -1,5 +1,9 @@
 [core]
   excludesfile = ~/.gitignore_global
+  compression = 9  # compress for network speec
+  fsync = none
+  whitespace = error  # incorrect whitespace = error
+  preloadindex = true  # faster status
 
 [color "status"]
   added = yellow
