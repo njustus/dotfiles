@@ -45,7 +45,11 @@ alias timestamp="date +%s"
 # sort json
 alias jqs="jq -S . "
 
+#strip blanks from clipboard
+alias blanks="pbpaste | grep . | pbcopy"
+
 # docker
+alias d=docker
 alias dcl='docker container ls'
 alias dcst='docker container stop'
 alias dil='docker image ls'
