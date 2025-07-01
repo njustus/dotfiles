@@ -16,11 +16,23 @@
   name =  N. Justus
   email = n-justus@outlook.com
 
+[status]
+  branch = true
+
 [editor]
   editor = vim
 
+[push]
+  autoSetupRemote = true
+  default = current
+
 [pull]
   rebase = false
+  default = current
+
+[log]
+    abbrevCommit = true
+
 
 [alias]
   f = fetch --all --prune
