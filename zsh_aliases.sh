@@ -60,3 +60,5 @@ alias compose=docker-compose
 alias mkube='kubectl -n=microservices'
 alias k=kubectl
 alias ka='kubectl -n=amaxo-rms'
+
+source ./local_aliases.sh
