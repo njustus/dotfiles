@@ -104,7 +104,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-DF=~/dotfiles
+export DF=~/dotfiles
 source $DF/zsh_aliases.sh
 export SBT_OPTS="-Xmx4G"
 # export PATH=/opt/homebrew/opt/node@16/bin:$PATH:$HOME/.cargo/bin
