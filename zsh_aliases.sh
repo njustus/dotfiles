@@ -55,10 +55,10 @@ alias dcst='docker container stop'
 alias dil='docker image ls'
 alias dce='docker container exec -it'
 alias compose=docker-compose
+alias comopse=docker-compose
 
 # kubernetes
 alias mkube='kubectl -n=microservices'
 alias k=kubectl
-alias ka='kubectl -n=amaxo-rms'
 
-source ./local_aliases.sh
+source $DF/local_aliases.sh
