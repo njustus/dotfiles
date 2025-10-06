@@ -39,6 +39,21 @@ else
     alias upgrade='sudo aptitude update && sudo aptitude safe-upgrade'
 fi
 
+if $(type zoxide &> /dev/null); then
+  eval "$(zoxide init zsh)"
+  alias cd=z
+fi
+
+if $(type fzf &> /dev/null); then
+  source <(fzf --zsh)
+fi
+
+if $(type eza &> /dev/null); then
+    alias ls="eza --icons";
+    alias ll="eza -lh --icons";
+    alias la="eza -ha --icons";
+fi
+
 alias store="sudo bash data/Docs/automation/store.sh"
 alias timestamp="date +%s"
 

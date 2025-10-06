@@ -111,19 +111,4 @@ export SBT_OPTS="-Xmx4G"
 export PATH=/opt/homebrew/opt/node@20/bin:$PATH:$HOME/.cargo/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-if $(type zoxide &> /dev/null); then
-  eval "$(zoxide init zsh)"
-  alias cd=z
-fi
-
-if $(type fzf &> /dev/null); then
-  source <(fzf --zsh)
-fi
-
-if $(type eza &> /dev/null); then
-    alias ls="eza --icons";
-    alias ll="eza -lh --icons";
-    alias la="eza -ha --icons";
-fi
-
 eval "$(starship init zsh)"
