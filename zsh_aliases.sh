@@ -54,6 +54,11 @@ if $(type eza &> /dev/null); then
     alias la="eza -ha --icons";
 fi
 
+if $(type bat &> /dev/null); then
+  alias cat="bat --theme OneHalfDark -p"
+fi
+
+
 alias store="sudo bash data/Docs/automation/store.sh"
 alias timestamp="date +%s"
 
