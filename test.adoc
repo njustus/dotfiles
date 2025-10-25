@@ -1,0 +1,9 @@
+== Subheading
+
+=== This is a test heading
+.Reveal Answer
+[%collapsible]
+====
+- this should not be visible
+- is hidden below Heading
+====
