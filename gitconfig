@@ -64,5 +64,8 @@
 [include]
     path = ~/.git-safedirs
 
-[includeIf "gitdir:~/data/detim/"]
+[includeIf "gitdir:~/Documents/detim/"]
+    path = ~/.gitconfig-work
+
+[includeIf "gitdir:~/Documents/work/"]
     path = ~/.gitconfig-work
