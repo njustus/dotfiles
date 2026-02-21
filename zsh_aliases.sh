@@ -20,6 +20,10 @@ function path() {
 	echo $PWD/$name
 }
 
+function prefix_today() {
+  [[ -f "$1" ]] && mv -vi "$1" "$(today)-$1";
+}
+
 #aliases
 if [ $(isMac) = true ]; then
     #extension alias
@@ -61,6 +65,8 @@ fi
 
 alias store="sudo bash data/Docs/automation/store.sh"
 alias timestamp="date +%s"
+alias today='date +%Y-%m-%d'
+
 
 # sort json
 alias jqs="jq -S . "
