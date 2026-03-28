@@ -1,6 +1,6 @@
 #!/bin/bash
 
-packages = (
+packages=(
     bash
     bat
     bottom
