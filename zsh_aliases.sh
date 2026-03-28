@@ -48,9 +48,14 @@ if $(type zoxide &> /dev/null); then
   alias cd=z
 fi
 
-if $(type fzf &> /dev/null); then
-  source <(fzf --zsh)
+if $(type tv &> /dev/null); then
+    echo "loaded tv"
+    eval "$(tv init zsh)"
+elif $(type fzf &> /dev/null); then
+    echo "loaded fzf"
+    source <(fzf --zsh)
 fi
+
 
 if $(type eza &> /dev/null); then
     alias ls="eza --icons";
