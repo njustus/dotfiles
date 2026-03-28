@@ -28,6 +28,9 @@ mkdir -p ~/.config/nushell
 ln -sf $current/nushell/env.nu ~/.config/nushell/env.nu
 ln -sf $current/nushell/config.nu ~/.config/nushell/config.nu
 
+echo "setup oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 #ln -sf $current/emacs ~/.emacs
 echo "setup prelude"
 curl -L https://git.io/epre | sh

@@ -3,8 +3,7 @@
 packages=(
     bash
     bat
-    bottom
-    dust
+    btm
     eza
     fd-find
     fzf
@@ -16,6 +15,7 @@ packages=(
     python3-pip
     ripgrep
     ruby
+    starship
     tmux
     tree
     vim
@@ -40,3 +40,12 @@ packages=(
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y "${packages[@]}"
+
+
+# snap packages
+snapPackages=(
+    dust
+    code
+)
+
+sudo snap install "${packages[@]}"
