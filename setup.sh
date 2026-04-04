@@ -17,7 +17,7 @@ ln -sf $current/gitignore_global ~/.gitignore_global
 echo "setup vim"
 ln -sf $current/vimrc ~/.vimrc
 cp -r $current/vim ~/vim
-rm -r ~/.vim
+rm -rf ~/.vim
 mv ~/vim ~/.vim
 
 echo "setup starship"
@@ -34,7 +34,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 #ln -sf $current/emacs ~/.emacs
 echo "setup prelude"
 curl -L https://git.io/epre | sh
-rm -r ~/.emacs.d/personal
+rm -rf ~/.emacs.d/personal
 ln -s $current/personal ~/.emacs.d/personal
 echo "[INFO] install needed icon fonts: 'M-x all-the-icons-install-fonts'"
 

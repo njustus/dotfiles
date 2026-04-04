@@ -4,6 +4,7 @@ packages=(
     bash
     bat
     btm
+    curl
     eza
     fd-find
     fzf
