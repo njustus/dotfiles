@@ -16,7 +16,6 @@ packages=(
     python3-pip
     ripgrep
     ruby
-    starship
     tmux
     tree
     vim

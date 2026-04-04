@@ -9,6 +9,7 @@ ln -sf $current/zshrc ~/.zshrc
 #ln -sf $current/tmux.conf ~/.tmux.conf
 cp -f $current/env_variables ~/.env_variables
 cp -f $current/system_config ~/.system_config
+cp -f $current/local_aliases.template.sh local_aliases.sh
 
 echo "setup git"
 ln -sf $current/gitconfig ~/.gitconfig
