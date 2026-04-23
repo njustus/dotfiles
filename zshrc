@@ -66,7 +66,7 @@ ZSH_THEME="gnzh"
 plugins=(
         git
         # rbenv
-        dotenv
+#        dotenv
         docker
         colored-man-pages
         mvn
