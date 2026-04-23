@@ -5,6 +5,7 @@ packages=(
     bat
     btm
     curl
+    cryptsetup
     eza
     fd-find
     fzf
