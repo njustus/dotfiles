@@ -40,6 +40,10 @@
 
 [alias]
   f = fetch --all --prune
+  ftf = fetch --tags --force
+  w  = worktree
+  wls = worktree list
+  cp = cherry-pick
   br = branch
   co = checkout
   df = diff
