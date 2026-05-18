@@ -24,6 +24,11 @@ function prefix_today() {
   [[ -f "$1" ]] && mv -vi "$1" "$(today)-$1";
 }
 
+function zip_pw() {
+  local file=$1
+  zip -e $file.zip $file
+}
+
 #aliases
 if [ $(isMac) = true ]; then
     #extension alias
@@ -31,6 +36,7 @@ if [ $(isMac) = true ]; then
     alias -s pdf='open -a preview'
     alias -s png='open -a preview'
     alias -s jpeg='open -a preview'
+    alias files='open -a finder .'
 else
     alias -s html='firefox'
     alias -s pdf='evince'
@@ -71,7 +77,6 @@ fi
 alias store="sudo bash data/Docs/automation/store.sh"
 alias timestamp="date +%s"
 alias today='date +%Y-%m-%d'
-
 
 # sort json
 alias jqs="jq -S . "
