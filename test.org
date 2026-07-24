@@ -1,3 +1,0 @@
-* Heading
-- this should not be visible
-- is hidden below Heading
