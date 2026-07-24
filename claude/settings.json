@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(*.env*)",
+      "Read(*secret*)",
+      "Read(~/.ssh/*)",
+      "Read(~/.claude/settings.json)",
+      "Read(~/.zsh*)",
+      "Read(./.claude/settings.json)",
+      "Read(./.claude/settings.local.json)",
+      "Bash(rm *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(http:*)",
+      "Bash(ssh:*)",
+      "Bash(docker:*)",
+      "Bash(podman:*)",
+      "Bash(kubectl:*)",
+      "Bash(sudo:*)",
+      "Bash(chmod:*)"
+    ]
+  },
+  "model": "opus[1m]",
+  "statusLine": {
+    "type": "command",
+    "command": "bash $HOME/.claude/statusline-command.sh"
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": false
+  },
+  "effortLevel": "medium",
+  "theme": "auto"
+}

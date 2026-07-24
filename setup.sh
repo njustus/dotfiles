@@ -47,3 +47,7 @@ echo "setup sbt plugins"
 sbt_plugins_path=~/.sbt/1.0/plugins
 mkdir -p $sbt_plugins_path
 ln -sf $current/sbt/plugins.sbt $sbt_plugins_path/plugins.sbt
+
+echo "setup claude"
+ln -sf $current/claude/settings.json ~/.claude/settings.json
+ln -sf $current/claude/statusline-command.sh ~/.claude/statusline-command.sh
