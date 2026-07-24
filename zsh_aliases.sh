@@ -70,13 +70,14 @@ if $(type eza &> /dev/null); then
 fi
 
 if $(type bat &> /dev/null); then
-  alias cat="bat --theme base16 -p"
+  alias cat="bat --theme base16 -n"
 fi
 
 
 alias store="sudo bash data/Docs/automation/store.sh"
 alias timestamp="date +%s"
 alias today='date +%Y-%m-%d'
+alias igrep='grep -iE'
 
 # sort json
 alias jqs="jq -S . "
