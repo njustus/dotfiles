@@ -82,6 +82,9 @@ alias igrep='grep -iE'
 # sort json
 alias jqs="jq -S . "
 
+#unescape an esacaped json string
+alias unescape_json="jq -r ."
+
 #strip blanks from clipboard
 alias blanks="pbpaste | grep . | pbcopy"
 
