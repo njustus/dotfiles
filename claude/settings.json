@@ -23,7 +23,7 @@
       "Bash(chmod:*)"
     ]
   },
-  "model": "opus[1m]",
+  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "bash $HOME/.claude/statusline-command.sh"
