@@ -37,6 +37,8 @@ if [ $(isMac) = true ]; then
     alias -s png='open -a preview'
     alias -s jpeg='open -a preview'
     alias files='open -a finder .'
+    alias outdated='brew update && brew outdated'
+    alias upgrade='brew update && brew upgrade'
 else
     alias -s html='firefox'
     alias -s pdf='evince'
@@ -88,11 +90,18 @@ alias unescape_json="jq -r ."
 #strip blanks from clipboard
 alias blanks="pbpaste | grep . | pbcopy"
 
+if $(type tv &> /dev/null); then
+  alias dll='tv docker-containers'
+  alias dil='tv docker-images'
+else
+  alias dil='docker image ls'
+fi
+
+
 # docker
 alias d=docker
 alias dcl='docker container ls'
 alias dcst='docker container stop'
-alias dil='docker image ls'
 alias dce='docker container exec -it'
 alias compose=docker-compose
 alias comopse=docker-compose
