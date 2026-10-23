@@ -35,6 +35,12 @@
     "enabled": true,
     "autoAllowBashIfSandboxed": false
   },
+  "feedbackDrafts": "off",
   "effortLevel": "medium",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    }
+  },
   "theme": "auto"
 }
