@@ -66,9 +66,9 @@ fi
 
 
 if $(type eza &> /dev/null); then
-    alias ls="eza --icons";
-    alias ll="eza -lh --icons";
-    alias la="eza -ha --icons";
+    alias ls="eza --icons=auto";
+    alias ll="eza --icons=auto -lh";
+    alias la="eza --icons=auto -ha";
 fi
 
 if $(type bat &> /dev/null); then
